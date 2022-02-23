@@ -1,90 +1,67 @@
-# Hardhat Vue.js Starter Template
+# CryptoVipers
 
-A starter template for Ethereum dApps that uses the following tools:
+A simple Ethereum-based [CryptoKitties](https://www.cryptokitties.co/)-like decentralized application (dapp) where you can own, buy, and breed vipers.
 
-- Hardhat
-- Waffle
-- ethers.js
-- Vue & Vuex
-- Web3Modal
-- Bootstrap 5
-- Vue Toasted
-- Vue Gravatar
+This repository is used in this Medium article:
 
-## Features
+https://medium.com/@sbenemerito/creating-a-cryptokitties-like-dapp-5115efc9e0bb
 
-### Seamless connect/disconnect wallet experience (using Web3Modal)
+---
 
-Web3Modal is used to support various different Ethereum wallets. When user switches between accounts and even chains, the UI quickly notices that and adapts to the change (account and ETH balance data are refreshed).
+![CryptoVipers](https://i.imgur.com/pBY8VX2.gif)
 
-![](assets/web3modal.png)
 
-### Alert when not on mainnet
+## Prerequisites
 
-If user's wallet is not set to Mainnet, an unobtrusive yellow alert band shows up just above the navigation bar. The alert notifies the user which (testnet) chain they are currently using.
+* **Node** - v10.x.x (preferrably v10.15.0 for long term support)
+* **npm** - v6.x.x (preferrably v6.6.0)
 
-![](assets/chain-alert.png)
+## Running It Locally
 
-### Storing contract addresses and ABIs on front-end
-
-The deploy.js script automatically stores all contract ABIs and their respective addresses in the /frontend/src/contracts folder.
-
-Addresses are separated from one another per contract name and also per chain ID.
-
-Example (`addresses.json`):
-
-```json
-{
-  "Token":{
-    "1337":"0x78afecb367f032d93eDf865Ada339AFf6ef2621b",
-    "3":"0x5FbDB2315678afecb367f032d93F642f64180aa3",
-    "1":"0xE2Df865998BD3f20117e037d1293367f032d93F6"
-  },
-  "Farm":{
-    "1337":"0x1Cf865998BD3f20eB6BCdAda339aa8BD3f2e26eb",
-    "3":"0x998BD3f20eB6Bafecb3673f201ca17e037d10aa3",
-    "1":"0xBCdAda33b67815678afecb365998BD3f2e26BCdA"
-  }
-}
-```
-
-## npm install
-
-Run installations in both root and in the frontend folder:
+Clone this repo via to your local machine and install the dependencies by doing the following:
 
 ```bash
+git clone https://github.com/openberry-ac/cryptovipers.git
+cd cryptovipers
 npm install
-cd frontend && npm install
 ```
 
-## Run Vue app
+Serve the application with hot reload in a development environment via:
 
 ```bash
-cd frontend && npm run serve
+npm run dev
 ```
 
-## Tests
+### Boilerplate
 
-### Solidity/Hardhat
+If it is only the boilerplate that you want to clone, do it via:
 
-```bash
-npx hardhat test
+```
+git clone https://github.com/openberry-ac/cryptovipers.git --branch boilerplate --single-branch
 ```
 
-## Deployment to ganache
+And then do the same following commands as shown above for starting the application, you should be all set by then.
 
-```bash
-npx hardhat run scripts/deploy.js --network ganache
-```
+## Built With
 
-## Deployment to a remote blockchain
+* [Solidity](https://solidity.readthedocs.io/en/v0.5.3/) - Ethereum's smart contract programming language
+* [Vue.js](https://vuejs.org/) - The Javascript framework used
+* [web3.js](https://github.com/ethereum/web3.js/) - Javascript library used to interact with the Ethereum blockchain
 
-```bash
-npx hardhat run scripts/deploy.js --network goerli
-```
+## openberry
 
-## Verify on Etherscan
+Anyone can become a blockchain engineer!
 
-```bash
-npx hardhat --network mainnet etherscan-verify --api-key <apikey>
-```
+openberry is a tutorial marketplace, designed to enable anyone to learn blockchain programming.
+
+**Website:**
+
+https://openberry.ac/
+
+**Medium:**
+
+https://medium.com/openberry
+
+**Twitter:**
+
+https://twitter.com/openberry_ac
