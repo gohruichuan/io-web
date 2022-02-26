@@ -1,7 +1,7 @@
 import Web3Modal from "web3modal";
 import { ethers } from "ethers";
-import BurnerConnectProvider from "@burner-wallet/burner-connect-provider";
-import Authereum from "authereum";
+// import BurnerConnectProvider from "@burner-wallet/burner-connect-provider";
+// import Authereum from "authereum";
 
 const state = {
   activeAccount: null,
@@ -47,12 +47,12 @@ const actions = {
     const providerOptions = {
       // MetaMask is enabled by default
       // Find other providers here: https://github.com/Web3Modal/web3modal/tree/master/docs/providers
-      burnerconnect: {
-        package: BurnerConnectProvider // required
-      },
-      authereum: {
-        package: Authereum // required
-      }
+      // burnerconnect: {
+      //   package: BurnerConnectProvider // required
+      // },
+      // authereum: {
+      //   package: Authereum // required
+      // }
     };
     
     const w3mObject = new Web3Modal({
